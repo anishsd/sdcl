@@ -1,6 +1,6 @@
 {
   "name": "@sdcl/componentlibrary",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Test component library",
   "main": "dist/index.js",
   "sideEffects": false,
