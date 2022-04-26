@@ -7,7 +7,7 @@ const dynamicStyles = (p: ButtonProps) => {
   let backgroundColor = 'var(--primary)';
   let padding = p.size === 'default' ? '0.5rem 1rem' : '1rem 1.5rem';
   let boxShadow = 'var(--shadow-lg-light)';
-  let arrowIconFill = p.dark ? 'var(--clr-yellow)' : 'var(--clr-orange)';
+  const arrowIconFill = p.dark ? 'var(--clr-yellow)' : 'var(--clr-orange)';
 
   if (p.variant === 'secondary') {
     color = p.dark ? 'var(--clr-yellow)' : 'var(--clr-purple)';
@@ -110,7 +110,7 @@ const activeStyles = (p: ButtonProps) => {
 const disabledStyles = (p: ButtonProps) => {
   let color = 'var(--clr-white)';
   let backgroundColor = 'var(--clr-orange-20)';
-  let arrowIconFill = p.dark
+  const arrowIconFill = p.dark
     ? 'var(--clr-tuna-gray-80)'
     : 'var(--clr-tuna-gray-40)';
 

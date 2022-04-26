@@ -1,6 +1,13 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true
+    }
+  },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -8,16 +15,14 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:jest/recommended",
-    "airbnb",
-    "prettier",
-    "plugin:node/recommended"
+    "prettier"
   ],
   "settings": {
     "react": {
       "version": "detect"
     }
   },
-  "plugins": ["prettier"],
+  "plugins": ["react", "prettier"],
   "rules": {
     "prettier/prettier": "error",
     "no-unused-vars": "warn",
@@ -25,6 +30,15 @@
     "func-names": "off",
     "no-process-exit": "off",
     "object-shorthand": "off",
-    "class-methods-use-this": "off"
-  }
+    "class-methods-use-this": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/no-find-dom-node": "off"
+  },
+  "overrides": [
+    {
+      "files": "*.mdx",
+      "extends": "plugin:mdx/recommended"
+    }
+  ]
 }

@@ -61,6 +61,7 @@ Typography.displayName = 'Typography';
 Typography.propTypes = {
   type: PropTypes.oneOf(Object.keys(typographyMap) as TypographyTypes[])
     .isRequired,
+  children: PropTypes.any,
 };
 
 Typography.defaultProps = {
