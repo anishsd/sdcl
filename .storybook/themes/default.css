@@ -1,0 +1,6 @@
+@import '../../src/styles/main.css';
+
+:root {
+  --primary: var(--clr-red);
+  --secondary: var(--clr-yellow);
+}

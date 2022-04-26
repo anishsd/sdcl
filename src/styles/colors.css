@@ -1,0 +1,200 @@
+:root {
+  /* Brand colors */
+  --clr-orange: #e94e0f;
+  --clr-orange-140: #982d01;
+  --clr-orange-120: #cc3d03;
+  --clr-orange-60: #ee7a4b;
+  --clr-orange-40: #f3a687;
+  --clr-orange-20: #f9d2c3;
+
+  --clr-purple: #870b58;
+  --clr-purple-140: #520234;
+  --clr-purple-120: #740048;
+  --clr-purple-60: #a54881;
+  --clr-purple-40: #c385ab;
+  --clr-purple-20: #e1c2d5;
+
+  --clr-red: #e4003a;
+  --clr-red-140: #8c0024;
+  --clr-red-120: #bf0031;
+  --clr-red-60: #ea3f6b;
+  --clr-red-40: #f17f9c;
+  --clr-red-20: #f8bfcd;
+
+  --clr-yellow: #f8ad07;
+  --clr-yellow-140: #e97a14;
+  --clr-yellow-120: #f29100;
+  --clr-yellow-60: #f9c145;
+  --clr-yellow-40: #fbd683;
+  --clr-yellow-20: #fdeac1;
+
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+
+  /* Gray colors */
+  --clr-tuna-gray: #303642;
+  --clr-tuna-gray-120: #242831;
+  --clr-tuna-gray-80: #555d71;
+  --clr-tuna-gray-60: #7f8594;
+  --clr-tuna-gray-40: #aaaeb8;
+  --clr-tuna-gray-20: #d4d6db;
+  --clr-tuna-gray-10: #e9eaed;
+  --clr-tuna-gray-5: #f9f9f9;
+
+  --clr-slate-gray: #7783a0;
+  --clr-slate-gray-80: #929bb3;
+  --clr-slate-gray-60: #adb4c6;
+  --clr-slate-gray-40: #c8cdd9;
+  --clr-slate-gray-20: #e3e6ef;
+  --clr-slate-gray-10: #f1f4f8;
+  --clr-slate-gray-5: #f8f9fb;
+
+  /* Functional colors */
+  --clr-info: #415fca;
+  --clr-info-140: #263879;
+  --clr-info-120: #334ba1;
+  --clr-info-80: #677fd4;
+  --clr-info-60: #8d9fdf;
+  --clr-info-40: #b3bfe9;
+  --clr-info-20: #d9dff4;
+
+  --clr-success: #21bc5f;
+  --clr-success-140: #137038;
+  --clr-success-120: #1a964b;
+  --clr-success-80: #4dc97f;
+  --clr-success-60: #79d69f;
+  --clr-success-40: #a6e4bf;
+  --clr-success-20: #d2f1df;
+
+  --clr-warning: #ffc700;
+  --clr-warning-140: #987700;
+  --clr-warning-120: #cb9f00;
+  --clr-warning-80: #ffd233;
+  --clr-warning-60: #ffdd66;
+  --clr-warning-40: #ffe899;
+  --clr-warning-20: #fff3cc;
+
+  --clr-error: #ff005c;
+  --clr-error-140: #980037;
+  --clr-error-120: #cb0049;
+  --clr-error-80: #ff337c;
+  --clr-error-60: #ff669d;
+  --clr-error-40: #ff99bd;
+  --clr-error-20: #ffccde;
+
+  /* Additional colors */
+  --clr-additional-deep-orange-140: #974425;
+  --clr-additional-deep-orange-120: #c95b32;
+  --clr-additional-deep-orange-100: #fc733f;
+  --clr-additional-deep-orange-80: #fc8f65;
+  --clr-additional-deep-orange-60: #fdab8b;
+  --clr-additional-deep-orange-40: #fdc7b2;
+  --clr-additional-deep-orange-20: #fee3d8;
+
+  --clr-additional-orange-140: #925e06;
+  --clr-additional-orange-120: #c37e08;
+  --clr-additional-orange-100: #f59e0b;
+  --clr-additional-orange-80: #f7b13b;
+  --clr-additional-orange-60: #f9c46c;
+  --clr-additional-orange-40: #fbd89d;
+  --clr-additional-orange-20: #fdebce;
+
+  --clr-additional-amber-140: #987304;
+  --clr-additional-amber-120: #cb9a05;
+  --clr-additional-amber-100: #ffc107;
+  --clr-additional-amber-80: #ffcd38;
+  --clr-additional-amber-60: #ffd96a;
+  --clr-additional-amber-40: #ffe69b;
+  --clr-additional-amber-20: #fff2cd;
+
+  --clr-additional-yellow-140: #988c23;
+  --clr-additional-yellow-120: #cbbb2f;
+  --clr-additional-yellow-100: #ffeb3b;
+  --clr-additional-yellow-80: #ffef62;
+  --clr-additional-yellow-60: #fff389;
+  --clr-additional-yellow-40: #fff7b0;
+  --clr-additional-yellow-20: #fffbd7;
+
+  --clr-additional-lime-140: #7a8322;
+  --clr-additional-lime-120: #a3af2d;
+  --clr-additional-lime-100: #cddc39;
+  --clr-additional-lime-80: #d7e360;
+  --clr-additional-lime-60: #e1ea88;
+  --clr-additional-lime-40: #ebf1af;
+  --clr-additional-lime-20: #f5f8d7;
+
+  --clr-additional-light-green-140: #53742c;
+  --clr-additional-light-green-120: #6f9b3b;
+  --clr-additional-light-green-100: #8bc34a;
+  --clr-additional-light-green-80: #a2cf6e;
+  --clr-additional-light-green-60: #b9db92;
+  --clr-additional-light-green-40: #d0e7b6;
+  --clr-additional-light-green-20: #e7f3da;
+
+  --clr-additional-green-140: #006744;
+  --clr-additional-green-120: #008a5b;
+  --clr-additional-green-100: #00ad73;
+  --clr-additional-green-80: #33bd8f;
+  --clr-additional-green-60: #66cdab;
+  --clr-additional-green-40: #99dec7;
+  --clr-additional-green-20: #cceee3;
+
+  --clr-additional-teal-140: #2c7a7b;
+  --clr-additional-teal-120: #319795;
+  --clr-additional-teal-100: #38b2ac;
+  --clr-additional-teal-80: #4fd1c5;
+  --clr-additional-teal-60: #81e6d9;
+  --clr-additional-teal-40: #b2f5ea;
+  --clr-additional-teal-20: #e6fffa;
+
+  --clr-additional-blue-140: #2b6cb0;
+  --clr-additional-blue-120: #3182ce;
+  --clr-additional-blue-100: #4299e1;
+  --clr-additional-blue-80: #63b3ed;
+  --clr-additional-blue-60: #90cdf4;
+  --clr-additional-blue-40: #bee3f8;
+  --clr-additional-blue-20: #ebf8ff;
+
+  --clr-additional-soft-blue-140: #4c51bf;
+  --clr-additional-soft-blue-120: #5a67d8;
+  --clr-additional-soft-blue-100: #667eea;
+  --clr-additional-soft-blue-80: #7f9cf5;
+  --clr-additional-soft-blue-60: #a3bffa;
+  --clr-additional-soft-blue-40: #c3dafe;
+  --clr-additional-soft-blue-20: #ebf4ff;
+
+  --clr-additional-indigo-140: #403294;
+  --clr-additional-indigo-120: #5243aa;
+  --clr-additional-indigo-100: #6554c0;
+  --clr-additional-indigo-80: #8777d9;
+  --clr-additional-indigo-60: #998dd9;
+  --clr-additional-indigo-40: #c0b6f2;
+  --clr-additional-indigo-20: #eae6ff;
+
+  --clr-additional-purple-140: #6b46c1;
+  --clr-additional-purple-120: #805ad5;
+  --clr-additional-purple-100: #9f7aea;
+  --clr-additional-purple-80: #b794f4;
+  --clr-additional-purple-60: #d6bcfa;
+  --clr-additional-purple-40: #e9d8fd;
+  --clr-additional-purple-20: #faf5ff;
+
+  --clr-additional-pink-140: #b83280;
+  --clr-additional-pink-120: #d53f8c;
+  --clr-additional-pink-100: #ed64a6;
+  --clr-additional-pink-80: #f687b3;
+  --clr-additional-pink-60: #fbb6ce;
+  --clr-additional-pink-40: #fed7e2;
+  --clr-additional-pink-20: #fed7e2;
+
+  /* Shadow colors */
+  --clr-light-shadow-sm: #3036421a;
+  --clr-light-shadow-md: #3036421a;
+  --clr-light-shadow-lg: #0f11151a;
+  --clr-light-shadow-xl: #0f11151a;
+
+  --clr-dark-shadow-sm: #0f11154d;
+  --clr-dark-shadow-md: #0f11154d;
+  --clr-dark-shadow-lg: #0f11154d;
+  --clr-dark-shadow-xl: #0f11154d;
+}

@@ -1,0 +1,11 @@
+:root {
+  --shadow-sm-light: 0rem 0.125rem 0.125rem 0rem var(--clr-light-shadow-sm);
+  --shadow-md-light: 0rem 0.25rem 0.5rem 0rem var(--clr-light-shadow-md);
+  --shadow-lg-light: 0rem 0.5rem 1.5rem 0rem var(--clr-light-shadow-lg);
+  --shadow-xl-light: 0rem 0.5rem 2rem 0rem var(--clr-light-shadow-xl);
+
+  --shadow-sm-dark: 0rem 0.125rem 0.125rem 0rem var(--clr-dark-shadow-sm);
+  --shadow-md-dark: 0rem 0.25rem 0.5rem 0rem var(--clr-dark-shadow-md);
+  --shadow-lg-dark: 0rem 0.5rem 1.5rem 0rem var(--clr-dark-shadow-lg);
+  --shadow-xl-dark: 0rem 0.5rem 2rem 0rem var(--clr-dark-shadow-xl);
+}
