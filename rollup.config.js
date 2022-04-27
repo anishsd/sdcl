@@ -30,6 +30,6 @@ export default [
         extract: path.resolve('dist/styles/index.css'),
       }),
     ],
-    output: [{ file: pkg.main, format: 'esm' }],
+    output: [{ file: pkg.main, format: 'cjs' }],
   },
 ];
