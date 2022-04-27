@@ -1,6 +1,6 @@
 {
   "name": "@anishsd/sdcl",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Test component library",
   "main": "dist/index.js",
   "sideEffects": false,
