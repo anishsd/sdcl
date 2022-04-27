@@ -1,6 +1,6 @@
 {
   "name": "@anishsd/componentlibrary",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Test component library",
   "main": "dist/index.js",
   "sideEffects": false,
