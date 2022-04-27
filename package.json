@@ -1,5 +1,5 @@
 {
-  "name": "@anishsd/componentlibrary",
+  "name": "@anishsd/sdcl",
   "version": "0.6.0",
   "description": "Test component library",
   "main": "dist/index.js",
