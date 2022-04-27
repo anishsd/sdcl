@@ -3,6 +3,9 @@
   "version": "0.6.2",
   "description": "Test component library",
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "sideEffects": false,
   "types": "dist/index.d.ts",
   "publishConfig": {
