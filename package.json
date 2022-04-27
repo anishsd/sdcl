@@ -5,6 +5,9 @@
   "main": "dist/index.js",
   "sideEffects": false,
   "types": "dist/index.d.ts",
+  "publishConfig": {
+    "@anishsd:registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "start": "npm run storybook",
     "dev": "npm run storybook",
