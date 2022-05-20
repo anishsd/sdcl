@@ -1,5 +1,7 @@
 import {
   createContext,
+  Dispatch,
+  SetStateAction,
   useCallback,
   useContext,
   useEffect,
@@ -15,7 +17,15 @@ export interface CustomThemeProviderProps {
   children: React.ReactNode | React.ReactNode[];
 }
 
-const ThemeContext = createContext<any>(null);
+type Context = {
+  theme: Theme;
+  setTheme: Dispatch<SetStateAction<Theme>>;
+  scheme: ColorScheme;
+  mode: ColorMode;
+  setMode: Dispatch<SetStateAction<ColorMode>>;
+} | null;
+
+const ThemeContext = createContext<Context>(null);
 
 const retrieveDefaultMode = (mode?: ColorMode) => {
   if (mode) {

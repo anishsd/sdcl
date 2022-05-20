@@ -1,5 +1,5 @@
 {
-  "name": "@sdworx/component-library",
+  "name": "@anishsd/component-library",
   "version": "0.6.6",
   "description": "SD Worx component Library",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
   "sideEffects": false,
   "types": "dist/index.d.ts",
   "publishConfig": {
-    "@sdworx:registry": "https://npm.pkg.github.com"
+    "@anishsd:registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "start": "npm run storybook",
@@ -85,6 +85,7 @@
     "jest": "^26.6.3",
     "jest-styled-components": "^7.0.8",
     "lint-staged": "^12.4.1",
+    "longest-streak": "^3.0.1",
     "postcss": "^8.4.6",
     "postcss-import": "^14.0.2",
     "postcss-loader": "^6.2.1",
