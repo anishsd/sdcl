@@ -9,6 +9,7 @@ module.exports = {
     'storybook-css-modules-preset',
     '@storybook/addon-a11y',
     '@etchteam/storybook-addon-css-variables-theme',
+    'storybook-addon-designs',
   ],
   framework: '@storybook/react',
   core: {

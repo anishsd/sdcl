@@ -8,6 +8,7 @@ import postcss from 'rollup-plugin-postcss';
 import del from 'rollup-plugin-delete';
 import pkg from './package.json';
 import path from 'path';
+import uglify from '@lopatnov/rollup-plugin-uglify';
 
 export default [
   {
@@ -29,6 +30,7 @@ export default [
         minimize: true,
         extract: path.resolve('dist/styles/index.css'),
       }),
+      uglify(),
     ],
     output: [{ file: pkg.main, format: 'cjs' }],
   },
