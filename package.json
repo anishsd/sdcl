@@ -1,6 +1,6 @@
 {
   "name": "@sdworx/component-library",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "SD Worx component Library",
   "main": "dist/index.js",
   "files": [
