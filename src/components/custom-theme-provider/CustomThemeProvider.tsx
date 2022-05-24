@@ -53,11 +53,11 @@ const retrieveDefaultMode = (mode?: ColorMode) => {
   return savedMode;
 };
 
-function CustomThemeProvider({
+export const CustomThemeProvider = ({
   theme: defaultTheme,
   mode: defaultMode,
   children,
-}: CustomThemeProviderProps) {
+}: CustomThemeProviderProps) => {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
   const [scheme, setScheme] = useState<ColorScheme>(ColorMode.Light);
   const [mode, setMode] = useState<ColorMode>(retrieveDefaultMode(defaultMode));
@@ -111,12 +111,10 @@ function CustomThemeProvider({
       {children}
     </ThemeContext.Provider>
   );
-}
+};
 
-function useCustomTheme() {
+export function useCustomTheme() {
   return useContext(ThemeContext);
 }
 
-export { useCustomTheme };
-
-export default CustomThemeProvider;
+CustomThemeProvider.displayName = 'CustomThemeProvider';

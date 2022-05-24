@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { Button } from '../Button';
-import CustomThemeProvider from '../../custom-theme-provider/CustomThemeProvider';
+import { CustomThemeProvider } from '../../custom-theme-provider/CustomThemeProvider';
 import { Theme } from '../../../types';
 
 export default {
