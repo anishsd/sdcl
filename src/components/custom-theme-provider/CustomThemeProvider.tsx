@@ -33,7 +33,11 @@ const ThemeContext = createContext<CustomContext>({
   setMode: () => undefined,
 });
 
+const isClient = typeof window !== 'undefined';
+
 const retrieveDefaultMode = (mode?: ColorMode) => {
+  if (!isClient) return ColorMode.Auto;
+
   if (mode) {
     localStorage.setItem(COLOR_MODE, mode);
 
@@ -74,7 +78,7 @@ export const CustomThemeProvider = ({
       resultingScheme = mode;
     }
 
-    localStorage.setItem(COLOR_MODE, mode);
+    isClient && localStorage.setItem(COLOR_MODE, mode);
     setScheme(resultingScheme);
   }, [mode]);
 
