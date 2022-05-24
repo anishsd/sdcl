@@ -1,21 +1,35 @@
 import { render, screen } from '@testing-library/react';
+import { Theme } from '../../types/index.d';
 import { Button } from './Button';
+import CustomThemeProvider from '../custom-theme-provider/CustomThemeProvider';
 
 describe('Button', () => {
   it('applies default type of button', () => {
-    render(<Button>hello</Button>);
+    render(
+      <CustomThemeProvider theme={Theme.Country}>
+        <Button>hello</Button>
+      </CustomThemeProvider>
+    );
 
     expect(screen.getByRole('button')).toHaveAttribute('type', 'button');
   });
 
   it('applies specific type if provided', () => {
-    render(<Button type="submit">hello</Button>);
+    render(
+      <CustomThemeProvider theme={Theme.Country}>
+        <Button type="submit">hello</Button>
+      </CustomThemeProvider>
+    );
 
     expect(screen.getByRole('button')).toHaveAttribute('type', 'submit');
   });
 
   it('applies valid attribute to element', () => {
-    render(<Button aria-label="Test">Hello</Button>);
+    render(
+      <CustomThemeProvider theme={Theme.Country}>
+        <Button aria-label="Test">Hello</Button>
+      </CustomThemeProvider>
+    );
 
     expect(screen.getByRole('button')).toHaveAttribute('aria-label', 'Test');
   });

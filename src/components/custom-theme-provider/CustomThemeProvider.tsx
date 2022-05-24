@@ -17,15 +17,21 @@ export interface CustomThemeProviderProps {
   children: React.ReactNode | React.ReactNode[];
 }
 
-type Context = {
+type CustomContext = {
   theme: Theme;
   setTheme: Dispatch<SetStateAction<Theme>>;
   scheme: ColorScheme;
   mode: ColorMode;
   setMode: Dispatch<SetStateAction<ColorMode>>;
-} | null;
+};
 
-const ThemeContext = createContext<Context>(null);
+const ThemeContext = createContext<CustomContext>({
+  theme: Theme.Country,
+  setTheme: () => undefined,
+  scheme: ColorMode.Light,
+  mode: ColorMode.Auto,
+  setMode: () => undefined,
+});
 
 const retrieveDefaultMode = (mode?: ColorMode) => {
   if (mode) {
