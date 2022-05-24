@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { Button } from './Button';
 import CustomThemeProvider from '../custom-theme-provider/CustomThemeProvider';
-import { Theme } from '../../types/index.d';
+import { Theme } from '../../types';
 
 describe('Button', () => {
   it('applies default type of button', () => {
