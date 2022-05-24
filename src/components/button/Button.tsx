@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import StyledButton from './styles';
 import { useCustomTheme } from '../custom-theme-provider/CustomThemeProvider';
-import { ColorMode } from '../../types/index.d';
+import { ColorMode } from '../../types';
 
 export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
   variant?: 'primary' | 'secondary' | 'tertiary';

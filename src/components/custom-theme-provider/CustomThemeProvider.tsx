@@ -7,7 +7,7 @@ import {
   useEffect,
   useState,
 } from 'react';
-import { ColorMode, ColorScheme, Theme } from '../../types/index.d';
+import { ColorMode, ColorScheme, Theme } from '../../types';
 import { COLOR_MODE } from '../../utils/constants';
 import '../../styles/main.css';
 
