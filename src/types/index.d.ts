@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
-export enum Theme {
+export const enum Theme {
   Sme = 'sme',
   Country = 'country',
 }
 
-export enum ColorMode {
+export const enum ColorMode {
   Light = 'light',
   Dark = 'dark',
   Auto = 'auto',
