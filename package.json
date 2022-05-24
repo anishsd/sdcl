@@ -1,5 +1,5 @@
 {
-  "name": "@anishsd/component-library",
+  "name": "@anishsd/sdcl",
   "version": "0.6.8",
   "description": "SD Worx component Library",
   "main": "dist/index.js",
