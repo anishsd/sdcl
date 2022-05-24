@@ -1,6 +1,6 @@
 {
   "name": "@anishsd/sdcl",
-  "version": "0.6.8",
+  "version": "0.6.9",
   "description": "SD Worx component Library",
   "main": "dist/index.js",
   "files": [
