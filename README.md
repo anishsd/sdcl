@@ -25,5 +25,18 @@ If you want to learn more about creating good readme files then refer the follow
 - [Visual Studio Code](https://github.com/Microsoft/vscode)
 - [Chakra Core](https://github.com/Microsoft/ChakraCore)
 
-https://github.com/settings/tokens
-https://github.com/settings/tokens/new
+# Publish npm package (via GitHub)
+
+1. Ensure that `.github/workflows/publish.yml` exists otherwise create it (https://www.newline.co/courses/newline-guide-to-building-a-company-component-library/continuous-integration-with-github-actions)
+2. Ensure that the name attribute in `package.json` is in the following format: @`GITHUB_USERNAME`/`PACKAGE_NAME`
+
+# Consume this component library (published on npm via Github)
+
+1. Ensure that `.npmrc` is created at the project's root level with the following:
+
+```
+//npm.pkg.github.com/:_authToken=PERSONAL_ACCESS_TOKEN
+@GITHUB_USERNAME:registry=https://npm.pkg.github.com
+```
+
+2. The `PERSONAL_ACCESS_TOKEN` can be retrieved from `https://github.com/settings/tokens`
