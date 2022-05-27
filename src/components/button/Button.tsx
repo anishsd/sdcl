@@ -1,10 +1,10 @@
-import React, { useCallback } from 'react';
+import { ComponentPropsWithoutRef, forwardRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import StyledButton from './styles';
 import { useCustomTheme } from '../custom-theme-provider/CustomThemeProvider';
 import { ColorMode } from '../../types';
 
-export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
+export interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
   variant?: 'primary' | 'secondary' | 'tertiary';
   size?: 'default' | 'big';
   dark?: boolean;
@@ -14,7 +14,7 @@ export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
 /**
  * Accepts all `ButtonHTMLAttributes`
  */
-export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, variant = 'primary', size, disabled, dark, ...props }, ref) => {
     const { scheme } = useCustomTheme();
 

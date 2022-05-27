@@ -1,4 +1,13 @@
-import React from 'react';
+import {
+  createContext,
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+  useCallback,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
 import { ColorMode, ColorScheme, Theme } from '../../types';
 import { COLOR_MODE } from '../../utils/constants';
 import '../../styles/main.css';
@@ -6,18 +15,18 @@ import '../../styles/main.css';
 export interface CustomThemeProviderProps {
   theme: Theme;
   mode?: ColorMode;
-  children: React.ReactNode | React.ReactNode[];
+  children: ReactNode | ReactNode[];
 }
 
 type CustomContext = {
   theme: Theme;
-  setTheme: React.Dispatch<React.SetStateAction<Theme>>;
+  setTheme: Dispatch<SetStateAction<Theme>>;
   scheme: ColorScheme;
   mode: ColorMode;
-  setMode: React.Dispatch<React.SetStateAction<ColorMode>>;
+  setMode: Dispatch<SetStateAction<ColorMode>>;
 };
 
-const ThemeContext = React.createContext<CustomContext>({
+const ThemeContext = createContext<CustomContext>({
   theme: Theme.Country,
   setTheme: () => undefined,
   scheme: ColorMode.Light,
@@ -54,13 +63,11 @@ export const CustomThemeProvider = ({
   mode: defaultMode,
   children,
 }: CustomThemeProviderProps) => {
-  const [theme, setTheme] = React.useState<Theme>(defaultTheme);
-  const [scheme, setScheme] = React.useState<ColorScheme>(ColorMode.Light);
-  const [mode, setMode] = React.useState<ColorMode>(
-    retrieveDefaultMode(defaultMode)
-  );
+  const [theme, setTheme] = useState<Theme>(defaultTheme);
+  const [scheme, setScheme] = useState<ColorScheme>(ColorMode.Light);
+  const [mode, setMode] = useState<ColorMode>(retrieveDefaultMode(defaultMode));
 
-  const evalScheme = React.useCallback(() => {
+  const evalScheme = useCallback(() => {
     let resultingScheme = ColorMode.Light;
 
     if (mode === ColorMode.Auto) {
@@ -76,7 +83,7 @@ export const CustomThemeProvider = ({
     setScheme(resultingScheme);
   }, [mode]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     import(`../../../.storybook/themes/${theme}.css`);
 
     const colorModeMediaQuery = window?.matchMedia?.(
@@ -102,7 +109,7 @@ export const CustomThemeProvider = ({
     };
   });
 
-  React.useEffect(() => evalScheme(), [evalScheme]);
+  useEffect(() => evalScheme(), [evalScheme]);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme, scheme, mode, setMode }}>
@@ -112,7 +119,7 @@ export const CustomThemeProvider = ({
 };
 
 export function useCustomTheme() {
-  return React.useContext(ThemeContext);
+  return useContext(ThemeContext);
 }
 
 CustomThemeProvider.displayName = 'CustomThemeProvider';

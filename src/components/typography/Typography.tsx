@@ -1,4 +1,4 @@
-import React from 'react';
+import { ComponentPropsWithoutRef, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import {
   H1,
@@ -33,17 +33,17 @@ const typographyMap = {
 type TypographyTypes = keyof typeof typographyMap;
 
 export interface TypographyProps
-  extends React.ComponentPropsWithoutRef<'h1'>,
-    React.ComponentPropsWithoutRef<'h2'>,
-    React.ComponentPropsWithoutRef<'h3'>,
-    React.ComponentPropsWithoutRef<'h4'>,
-    React.ComponentPropsWithoutRef<'h5'>,
-    React.ComponentPropsWithoutRef<'h6'>,
-    React.ComponentPropsWithoutRef<'p'> {
+  extends ComponentPropsWithoutRef<'h1'>,
+    ComponentPropsWithoutRef<'h2'>,
+    ComponentPropsWithoutRef<'h3'>,
+    ComponentPropsWithoutRef<'h4'>,
+    ComponentPropsWithoutRef<'h5'>,
+    ComponentPropsWithoutRef<'h6'>,
+    ComponentPropsWithoutRef<'p'> {
   type: TypographyTypes;
 }
 
-export const Typography = React.forwardRef<
+export const Typography = forwardRef<
   HTMLHeadingElement | HTMLParagraphElement,
   TypographyProps
 >(({ type, children, ...props }, ref) => {
