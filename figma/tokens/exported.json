@@ -1,0 +1,57 @@
+{
+  "global": {
+    "spacing": {
+      "sm": {
+        "value": "4",
+        "type": "spacing"
+      },
+      "md": {
+        "value": "8",
+        "type": "spacing"
+      },
+      "lg": {
+        "value": "12",
+        "type": "spacing"
+      },
+      "xl": {
+        "value": "16",
+        "type": "spacing"
+      }
+    },
+    "color": {
+      "white": {
+        "value": "#fff",
+        "type": "color"
+      },
+      "black": {
+        "value": "#000",
+        "type": "color"
+      },
+      "purple": {
+        "value": "#7553ff",
+        "type": "color"
+      },
+      "green": {
+        "value": "#00992f",
+        "type": "color"
+      }
+    }
+  },
+  "sme": {
+    "color": {
+      "primary": {
+        "value": "{color.green}",
+        "type": "color"
+      }
+    }
+  },
+  "country": {
+    "color": {
+      "primary": {
+        "value": "{color.purple}",
+        "type": "color"
+      }
+    }
+  },
+  "$themes": []
+}
