@@ -28,12 +28,24 @@
         "type": "color"
       },
       "purple": {
-        "value": "#4900ff",
+        "value": "#7553ff",
+        "type": "color"
+      },
+      "green": {
+        "value": "#00992f",
         "type": "color"
       }
     }
   },
   "sme": {
+    "color": {
+      "primary": {
+        "value": "{color.green}",
+        "type": "color"
+      }
+    }
+  },
+  "country": {
     "color": {
       "primary": {
         "value": "{color.purple}",
