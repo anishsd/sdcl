@@ -14,9 +14,9 @@ const { log, logErr, asyncExec } = require('./common.js');
 const { FIGMA_SYNC_BRANCH } = require('../config.js');
 
 const commentStartSeparator =
-  '~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~';
+  '~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~';
 const commentEndSeparator =
-  '===================================================';
+  '=====================================================';
 
 function checkCurrentGitBranchStatus() {
   return new Promise((resolve, reject) => {
