@@ -103,11 +103,7 @@ function postSync() {
     lintCode()
       .then(() =>
         stageAndCommitCode()
-          .then(() =>
-            pushCode()
-              .then(() => resolve())
-              .catch((e) => reject(e))
-          )
+          .then(() => pushCode().finally(() => resolve()))
           .catch((e) => reject(e))
       )
       .catch((e) => reject(e));
