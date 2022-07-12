@@ -15,6 +15,13 @@ const { FIGMA_SYNC_BRANCH } = require('../config.js');
 
 const commentStartSeparator = '~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~';
 const commentEndSeparator = '=============================================';
+const buildCompleteMessage =
+  '\n' +
+  commentEndSeparator +
+  '\n' +
+  'Style Dictionary: Build completed!' +
+  '\n' +
+  commentEndSeparator;
 
 function checkCurrentGitBranchStatus() {
   return new Promise((resolve, reject) => {
@@ -106,11 +113,12 @@ function postSync() {
           .then(() =>
             pushCode()
               .then(() => resolve())
-              .catch(() =>
+              .catch(() => {
+                log(buildCompleteMessage + '\n');
                 reject(
                   'git push failed. Please try pushing your code manually.'
-                )
-              )
+                );
+              })
           )
           .catch((e) => reject(e))
       )
@@ -154,14 +162,7 @@ async function sync() {
 
     await postSync();
 
-    log(
-      '\n' +
-        commentEndSeparator +
-        '\n' +
-        'Style Dictionary: Build completed!' +
-        '\n' +
-        commentEndSeparator
-    );
+    log(buildCompleteMessage);
   } catch (err) {
     logErr('Error :>> ', err);
   }
