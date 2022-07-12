@@ -26,7 +26,8 @@
     "format": "prettier --write \"src/**/*\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "figsync": "node figma/scripts/sync-tokens.cjs"
   },
   "keywords": [],
   "author": "",
@@ -102,6 +103,7 @@
     "sass-loader": "^12.6.0",
     "storybook-addon-designs": "^6.2.1",
     "storybook-css-modules-preset": "^1.1.1",
+    "style-dictionary": "^3.7.1",
     "style-loader": "^3.3.1",
     "token-transformer": "^0.0.24",
     "ts-jest": "^26.5.6",
