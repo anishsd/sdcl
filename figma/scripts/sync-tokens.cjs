@@ -15,13 +15,6 @@ const { FIGMA_SYNC_BRANCH } = require('../config.js');
 
 const commentStartSeparator = '~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~';
 const commentEndSeparator = '=============================================';
-const buildCompleteMessage =
-  '\n' +
-  commentEndSeparator +
-  '\n' +
-  'Style Dictionary: Build completed!' +
-  '\n' +
-  commentEndSeparator;
 
 function checkCurrentGitBranchStatus() {
   return new Promise((resolve, reject) => {
@@ -83,16 +76,6 @@ function stageAndCommitCode() {
   });
 }
 
-function pushCode() {
-  return new Promise((resolve, reject) => {
-    const lintCommand = 'git';
-
-    asyncExec(lintCommand)
-      .then(() => resolve())
-      .catch((e) => reject(e));
-  });
-}
-
 function preSync() {
   return new Promise((resolve, reject) => {
     checkCurrentGitBranchStatus()
@@ -110,16 +93,7 @@ function postSync() {
     lintCode()
       .then(() =>
         stageAndCommitCode()
-          .then(() =>
-            pushCode()
-              .then(() => resolve())
-              .catch(() => {
-                log(buildCompleteMessage + '\n');
-                reject(
-                  'git push failed. Please try pushing your code manually.'
-                );
-              })
-          )
+          .then(() => resolve())
           .catch((e) => reject(e))
       )
       .catch((e) => reject(e));
@@ -162,7 +136,16 @@ async function sync() {
 
     await postSync();
 
-    log(buildCompleteMessage);
+    log(
+      '\n' +
+        commentEndSeparator +
+        '\n' +
+        'Style Dictionary: Build completed!' +
+        '\n\n' +
+        'Your may now push your synced Figma tokens to the remote git branch.' +
+        '\n' +
+        commentEndSeparator
+    );
   } catch (err) {
     logErr('Error :>> ', err);
   }
