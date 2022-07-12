@@ -103,7 +103,15 @@ function postSync() {
     lintCode()
       .then(() =>
         stageAndCommitCode()
-          .then(() => pushCode().finally(() => resolve()))
+          .then(() =>
+            pushCode()
+              .then(() => resolve())
+              .catch(() =>
+                reject(
+                  'git push failed. Please try pushing your code manually.'
+                )
+              )
+          )
           .catch((e) => reject(e))
       )
       .catch((e) => reject(e));
