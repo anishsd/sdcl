@@ -56,19 +56,61 @@ function refreshGitSyncBranch() {
   });
 }
 
+function lintCode() {
+  return new Promise((resolve, reject) => {
+    const lintCommand = 'npm run format';
+
+    asyncExec(lintCommand)
+      .then(() => resolve())
+      .catch((e) => reject(e));
+  });
+}
+
+function stageAndCommitCode() {
+  return new Promise((resolve, reject) => {
+    const stageAndCommitCommand = `git add . && git commit -m "[${FIGMA_SYNC_BRANCH}]"`;
+
+    asyncExec(stageAndCommitCommand)
+      .then(() => resolve())
+      .catch((e) => reject(e));
+  });
+}
+
+function pushCode() {
+  return new Promise((resolve, reject) => {
+    const lintCommand = 'git';
+
+    asyncExec(lintCommand)
+      .then(() => resolve())
+      .catch((e) => reject(e));
+  });
+}
+
 function preSync() {
   return new Promise((resolve, reject) => {
-    try {
-      checkCurrentGitBranchStatus()
-        .then(() =>
-          refreshGitSyncBranch()
-            .then(() => resolve())
-            .catch((e) => reject(e))
-        )
-        .catch((e) => reject(e));
-    } catch (e) {
-      reject(e);
-    }
+    checkCurrentGitBranchStatus()
+      .then(() =>
+        refreshGitSyncBranch()
+          .then(() => resolve())
+          .catch((e) => reject(e))
+      )
+      .catch((e) => reject(e));
+  });
+}
+
+function postSync() {
+  return new Promise((resolve, reject) => {
+    lintCode()
+      .then(() =>
+        stageAndCommitCode()
+          .then(() =>
+            pushCode()
+              .then(() => resolve())
+              .catch((e) => reject(e))
+          )
+          .catch((e) => reject(e))
+      )
+      .catch((e) => reject(e));
   });
 }
 
@@ -105,6 +147,8 @@ async function sync() {
     );
 
     buildTokens();
+
+    await postSync();
 
     log(
       '\n' +
