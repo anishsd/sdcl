@@ -68,7 +68,7 @@ function lintCode() {
 
 function stageAndCommitCode() {
   return new Promise((resolve, reject) => {
-    const stageAndCommitCommand = `git add . && git commit -m "[${FIGMA_SYNC_BRANCH}]"`;
+    const stageAndCommitCommand = `git add . && git commit -m "[${FIGMA_SYNC_BRANCH}] Synced figma tokens"`;
 
     asyncExec(stageAndCommitCommand)
       .then(() => resolve())
