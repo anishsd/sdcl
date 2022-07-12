@@ -82,7 +82,9 @@ function stageAndCommitCode() {
             )
           )
           .catch(() =>
-            resolve('Nothing to commit. Figma tokens are already in sync.')
+            resolve(
+              'Nothing to commit. Figma tokens are probably already in sync. It might also be an error. Please check the above logs for more information.'
+            )
           )
       )
       .catch((e) => reject(e));
