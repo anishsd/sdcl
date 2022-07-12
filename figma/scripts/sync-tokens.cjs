@@ -74,7 +74,11 @@ function stageAndCommitCode() {
     asyncExec(stageCommand)
       .then(() =>
         asyncExec(commitCommand)
-          .then(() => resolve())
+          .then(() =>
+            resolve(
+              'Figma tokens have been synced. You may now push your code to the remote git branch.'
+            )
+          )
           .catch(() =>
             resolve('Nothing to commit. Figma tokens are already in sync.')
           )
@@ -100,7 +104,7 @@ function postSync() {
     lintCode()
       .then(() =>
         stageAndCommitCode()
-          .then(() => resolve())
+          .then((resp) => resolve(resp))
           .catch((e) => reject(e))
       )
       .catch((e) => reject(e));
@@ -141,7 +145,7 @@ async function sync() {
 
     buildTokens();
 
-    await postSync();
+    const finalMessage = await postSync();
 
     log(
       '\n' +
@@ -149,7 +153,7 @@ async function sync() {
         '\n' +
         'Style Dictionary: Build completed!' +
         '\n\n' +
-        'Your may now push your synced Figma tokens to the remote git branch.' +
+        finalMessage +
         '\n' +
         commentEndSeparator
     );
