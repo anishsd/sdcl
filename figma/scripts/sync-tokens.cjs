@@ -13,8 +13,10 @@ const { log, logErr, asyncExec } = require('./common.js');
 // eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
 const { FIGMA_SYNC_BRANCH } = require('../config.js');
 
-const commentStartSeparator = '~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~';
-const commentEndSeparator = '=============================================';
+const commentStartSeparator =
+  '~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~';
+const commentEndSeparator =
+  '===================================================';
 
 function checkCurrentGitBranchStatus() {
   return new Promise((resolve, reject) => {
