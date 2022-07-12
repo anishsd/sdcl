@@ -75,9 +75,11 @@ function stageAndCommitCode() {
       .then(() =>
         asyncExec(commitCommand)
           .then(() => resolve())
-          .catch((e) => reject('error in stage'))
+          .catch(() =>
+            resolve('Nothing to commit. Figma tokens are already in sync.')
+          )
       )
-      .catch((e) => reject('error in commit'));
+      .catch((e) => reject(e));
   });
 }
 
