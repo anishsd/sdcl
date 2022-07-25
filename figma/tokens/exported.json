@@ -53,5 +53,13 @@
       }
     }
   },
+  "test": {
+    "color": {
+      "primary": {
+        "value": "{color.black}",
+        "type": "color"
+      }
+    }
+  },
   "$themes": []
 }
