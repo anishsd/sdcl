@@ -53,28 +53,5 @@
       }
     }
   },
-  "test": {
-    "color": {
-      "primary": {
-        "value": "{color.black}",
-        "type": "color"
-      }
-    },
-    "drop-shadow": {
-      "primary": {
-        "default": {
-          "value": {
-            "x": "0",
-            "y": "1",
-            "blur": "2",
-            "spread": "0",
-            "color": "{color.green}",
-            "type": "dropShadow"
-          },
-          "type": "boxShadow"
-        }
-      }
-    }
-  },
   "$themes": []
 }
