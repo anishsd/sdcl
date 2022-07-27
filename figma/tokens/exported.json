@@ -405,8 +405,10 @@
           }
         },
         "white": {
-          "value": "#F9D2C3",
-          "type": "color"
+          "base": {
+            "value": "#FFFFFF",
+            "type": "color"
+          }
         }
       },
       "gray": {
