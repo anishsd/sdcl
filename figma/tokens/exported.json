@@ -102,13 +102,9 @@
         "type": "opacity"
       }
     },
-    "fontFamilies": {
-      "heading": {
-        "value": "Inter",
-        "type": "fontFamilies"
-      },
-      "body": {
-        "value": "Roboto",
+    "fontFamily": {
+      "nimbus": {
+        "value": "Nimbus-Sans",
         "type": "fontFamilies"
       },
       "roboto": {
@@ -116,7 +112,7 @@
         "type": "fontFamilies"
       }
     },
-    "lineHeights": {
+    "lineHeight": {
       "0": {
         "value": "24",
         "type": "lineHeights"
