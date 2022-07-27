@@ -409,6 +409,12 @@
             "value": "#FFFFFF",
             "type": "color"
           }
+        },
+        "black": {
+          "base": {
+            "value": "#000000",
+            "type": "color"
+          }
         }
       },
       "gray": {
