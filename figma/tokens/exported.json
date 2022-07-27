@@ -300,19 +300,6 @@
           "paragraphSpacing": "{paragraphSpacing.h2}"
         },
         "type": "typography"
-      },
-      "button": {
-        "xl": {
-          "value": {
-            "fontFamily": "{fontFamily.nimbus}",
-            "fontWeight": "{fontWeight.medium}",
-            "lineHeight": "1.75rem",
-            "fontSize": "1.125rem",
-            "paragraphSpacing": "0",
-            "letterSpacing": "{letterSpacing.0}"
-          },
-          "type": "typography"
-        }
       }
     },
     "color": {
@@ -1193,6 +1180,21 @@
     }
   },
   "country": {
+    "typography": {
+      "button": {
+        "xl": {
+          "value": {
+            "fontFamily": "{fontFamily.nimbus}",
+            "fontWeight": "{fontWeight.medium}",
+            "lineHeight": "1.75rem",
+            "fontSize": "1.125rem",
+            "paragraphSpacing": "0",
+            "letterSpacing": "{letterSpacing.0}"
+          },
+          "type": "typography"
+        }
+      }
+    },
     "button": {
       "xl": {
         "primary": {
@@ -1238,7 +1240,7 @@
               }
             },
             "typography": {
-              "value": "{typography.button.xl}",
+              "value": "{country.typography.button.xl}",
               "type": "typography"
             }
           },
