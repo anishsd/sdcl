@@ -1240,7 +1240,7 @@
               }
             },
             "typography": {
-              "value": "{country.typography.button.xl}",
+              "value": "{typography.button.xl}",
               "type": "typography"
             }
           },
