@@ -132,11 +132,11 @@
     },
     "letterSpacing": {
       "0": {
-        "value": "1",
+        "value": "0",
         "type": "letterSpacing"
       },
       "1": {
-        "value": "0",
+        "value": "1",
         "type": "letterSpacing"
       },
       "default": {
@@ -166,29 +166,41 @@
         "type": "paragraphSpacing"
       }
     },
-    "fontWeights": {
-      "headingRegular": {
-        "value": "Regular",
+    "fontWeight": {
+      "thin": {
+        "value": "100",
         "type": "fontWeights"
       },
-      "headingBold": {
-        "value": "Bold",
+      "extraLight": {
+        "value": "200",
         "type": "fontWeights"
       },
-      "bodyRegular": {
-        "value": "Regular",
+      "light": {
+        "value": "300",
         "type": "fontWeights"
       },
-      "bodyBold": {
-        "value": "Bold",
+      "normal": {
+        "value": "400",
         "type": "fontWeights"
       },
-      "roboto-0": {
-        "value": "Bold",
+      "medium": {
+        "value": "500",
         "type": "fontWeights"
       },
-      "roboto-1": {
-        "value": "Medium",
+      "semiBold": {
+        "value": "600",
+        "type": "fontWeights"
+      },
+      "bold": {
+        "value": "700",
+        "type": "fontWeights"
+      },
+      "extraBold": {
+        "value": "800",
+        "type": "fontWeights"
+      },
+      "heavy": {
+        "value": "900",
         "type": "fontWeights"
       }
     },
@@ -288,6 +300,19 @@
           "paragraphSpacing": "{paragraphSpacing.h2}"
         },
         "type": "typography"
+      },
+      "button": {
+        "xl": {
+          "value": {
+            "fontFamily": "{fontFamily.nimbus}",
+            "fontWeight": "{fontWeight.medium}",
+            "lineHeight": "1.75rem",
+            "fontSize": "1.125rem",
+            "paragraphSpacing": "0",
+            "letterSpacing": "{letterSpacing.0}"
+          },
+          "type": "typography"
+        }
       }
     },
     "color": {
@@ -1211,6 +1236,10 @@
                 "value": "{borderRadius.sm}",
                 "type": "borderRadius"
               }
+            },
+            "typography": {
+              "value": "{typography.button.xl}",
+              "type": "typography"
             }
           },
           "active": {
