@@ -1138,8 +1138,8 @@
           "value": {
             "fontFamily": "{fontFamily.roboto}",
             "fontWeight": "{fontWeight.thin}",
-            "lineHeight": "1.75rem",
-            "fontSize": "1.125rem",
+            "lineHeight": "28",
+            "fontSize": "18",
             "paragraphSpacing": "0",
             "letterSpacing": "{letterSpacing.0}"
           },
