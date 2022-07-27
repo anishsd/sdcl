@@ -57,11 +57,11 @@
         "value": "4",
         "type": "borderRadius"
       },
-      "lg": {
+      "md": {
         "value": "8",
         "type": "borderRadius"
       },
-      "xl": {
+      "lg": {
         "value": "16",
         "type": "borderRadius"
       }
