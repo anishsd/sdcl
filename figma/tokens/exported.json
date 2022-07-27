@@ -1184,8 +1184,8 @@
       "button": {
         "xl": {
           "value": {
-            "fontFamily": "{fontFamily.nimbus}",
-            "fontWeight": "{fontWeight.medium}",
+            "fontFamily": "{fontFamily.roboto}",
+            "fontWeight": "{fontWeight.thin}",
             "lineHeight": "1.75rem",
             "fontSize": "1.125rem",
             "paragraphSpacing": "0",
