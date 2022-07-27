@@ -1178,34 +1178,43 @@
           "default": {
             "foreground": {
               "light": {
-                "value": "{color.brand.orange.brand}",
+                "value": "{color.brand.white.base}",
                 "type": "color"
               },
               "dark": {
-                "value": "{color.brand.orange.brand}",
+                "value": "{color.brand.white.base}",
                 "type": "color"
               }
             },
             "background": {
               "light": {
-                "value": "{color.brand.orange.brand}",
+                "value": "{color.brand.orange.base}",
                 "type": "color"
               },
               "dark": {
-                "value": "{color.brand.orange.brand}",
+                "value": "{color.brand.orange.base}",
                 "type": "color"
               }
             },
             "shadow": {
-              "value": {
-                "x": "0",
-                "y": "1",
-                "blur": "2",
-                "spread": "0",
-                "color": "{color.boxShadow.10}",
+              "light": {
+                "value": "{shadow.10.sm}",
                 "type": "dropShadow"
               },
-              "type": "boxShadow"
+              "dark": {
+                "value": "{shadow.10.sm}",
+                "type": "dropShadow"
+              }
+            },
+            "borderRadius": {
+              "light": {
+                "value": "{borderRadius.sm}",
+                "type": "borderRadius"
+              },
+              "dark": {
+                "value": "{borderRadius.sm}",
+                "type": "borderRadius"
+              }
             }
           },
           "active": {
