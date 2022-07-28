@@ -1132,21 +1132,6 @@
     }
   },
   "country": {
-    "typography": {
-      "button": {
-        "xl": {
-          "value": {
-            "fontFamily": "{fontFamily.roboto}",
-            "fontWeight": "{fontWeight.thin}",
-            "lineHeight": "28",
-            "fontSize": "18",
-            "paragraphSpacing": "0",
-            "letterSpacing": "{letterSpacing.0}"
-          },
-          "type": "typography"
-        }
-      }
-    },
     "button": {
       "xl": {
         "primary": {
@@ -1191,9 +1176,17 @@
                 "type": "borderRadius"
               }
             },
-            "typography": {
-              "value": "{typography.button.xl}",
-              "type": "typography"
+            "fontSize": {
+              "value": "18",
+              "type": "fontSizes"
+            },
+            "fontWeight": {
+              "value": "28",
+              "type": "fontWeights"
+            },
+            "letterSpacing": {
+              "value": "0",
+              "type": "letterSpacing"
             }
           },
           "active": {
