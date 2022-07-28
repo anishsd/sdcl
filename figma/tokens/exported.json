@@ -1181,7 +1181,7 @@
               "type": "fontSizes"
             },
             "fontWeight": {
-              "value": "28",
+              "value": "{fontWeight.medium}",
               "type": "fontWeights"
             },
             "letterSpacing": {
