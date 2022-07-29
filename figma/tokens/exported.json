@@ -1227,13 +1227,25 @@
               }
             },
             "spacing": {
-              "light": {
-                "value": "10 20",
-                "type": "spacing"
+              "vertical": {
+                "light": {
+                  "value": "10",
+                  "type": "spacing"
+                },
+                "dark": {
+                  "value": "10",
+                  "type": "spacing"
+                }
               },
-              "dark": {
-                "value": "10 20",
-                "type": "spacing"
+              "horizontal": {
+                "light": {
+                  "value": "20",
+                  "type": "spacing"
+                },
+                "dark": {
+                  "value": "20",
+                  "type": "spacing"
+                }
               }
             },
             "gap": {
