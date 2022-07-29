@@ -1225,6 +1225,26 @@
                 "value": "{fontFamily.roboto}",
                 "type": "fontFamilies"
               }
+            },
+            "spacing": {
+              "light": {
+                "value": "10 20",
+                "type": "spacing"
+              },
+              "dark": {
+                "value": "10 20",
+                "type": "spacing"
+              }
+            },
+            "gap": {
+              "light": {
+                "value": "{spacing.md}",
+                "type": "spacing"
+              },
+              "dark": {
+                "value": "{spacing.md}",
+                "type": "spacing"
+              }
             }
           },
           "active": {
