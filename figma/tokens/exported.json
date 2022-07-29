@@ -6,7 +6,7 @@
         "type": "spacing"
       },
       "xs": {
-        "value": "4",
+        "value": "4px",
         "type": "spacing"
       },
       "sm": {
@@ -1229,21 +1229,21 @@
             "spacing": {
               "vertical": {
                 "light": {
-                  "value": "10",
+                  "value": "10px",
                   "type": "spacing"
                 },
                 "dark": {
-                  "value": "10",
+                  "value": "10px",
                   "type": "spacing"
                 }
               },
               "horizontal": {
                 "light": {
-                  "value": "20",
+                  "value": "20px",
                   "type": "spacing"
                 },
                 "dark": {
-                  "value": "20",
+                  "value": "20px",
                   "type": "spacing"
                 }
               }
