@@ -1159,11 +1159,11 @@
             "shadow": {
               "light": {
                 "value": "{shadow.10.sm}",
-                "type": "dropShadow"
+                "type": "boxShadow"
               },
               "dark": {
                 "value": "{shadow.10.sm}",
-                "type": "dropShadow"
+                "type": "boxShadow"
               }
             },
             "borderRadius": {
@@ -1251,11 +1251,11 @@
             "shadow": {
               "light": {
                 "value": "{shadow.10.sm}",
-                "type": "dropShadow"
+                "type": "boxShadow"
               },
               "dark": {
                 "value": "{shadow.10.sm}",
-                "type": "dropShadow"
+                "type": "boxShadow"
               }
             },
             "borderRadius": {
@@ -1343,11 +1343,11 @@
             "shadow": {
               "light": {
                 "value": "{shadow.10.sm}",
-                "type": "dropShadow"
+                "type": "boxShadow"
               },
               "dark": {
                 "value": "{shadow.10.sm}",
-                "type": "dropShadow"
+                "type": "boxShadow"
               }
             },
             "borderRadius": {
@@ -1435,11 +1435,11 @@
             "shadow": {
               "light": {
                 "value": "{shadow.10.sm}",
-                "type": "dropShadow"
+                "type": "boxShadow"
               },
               "dark": {
                 "value": "{shadow.10.sm}",
-                "type": "dropShadow"
+                "type": "boxShadow"
               }
             },
             "borderRadius": {
@@ -1527,11 +1527,11 @@
             "shadow": {
               "light": {
                 "value": "{shadow.10.sm}",
-                "type": "dropShadow"
+                "type": "boxShadow"
               },
               "dark": {
                 "value": "{shadow.10.sm}",
-                "type": "dropShadow"
+                "type": "boxShadow"
               }
             },
             "borderRadius": {
@@ -1601,11 +1601,11 @@
             "shadow": {
               "light": {
                 "value": "{shadow.10.sm}",
-                "type": "dropShadow"
+                "type": "boxShadow"
               },
               "dark": {
                 "value": "{shadow.10.sm}",
-                "type": "dropShadow"
+                "type": "boxShadow"
               }
             },
             "borderRadius": {
