@@ -1205,6 +1205,26 @@
                 "value": "{letterSpacing.0}",
                 "type": "letterSpacing"
               }
+            },
+            "lineHeight": {
+              "light": {
+                "value": "28",
+                "type": "lineHeights"
+              },
+              "dark": {
+                "value": "28",
+                "type": "lineHeights"
+              }
+            },
+            "fontFamily": {
+              "light": {
+                "value": "{fontFamily.roboto}",
+                "type": "fontFamilies"
+              },
+              "dark": {
+                "value": "{fontFamily.roboto}",
+                "type": "fontFamilies"
+              }
             }
           },
           "active": {
@@ -1276,6 +1296,26 @@
               "dark": {
                 "value": "{letterSpacing.0}",
                 "type": "letterSpacing"
+              }
+            },
+            "lineHeight": {
+              "light": {
+                "value": "28",
+                "type": "lineHeights"
+              },
+              "dark": {
+                "value": "28",
+                "type": "lineHeights"
+              }
+            },
+            "fontFamily": {
+              "light": {
+                "value": "{fontFamily.roboto}",
+                "type": "fontFamilies"
+              },
+              "dark": {
+                "value": "{fontFamily.roboto}",
+                "type": "fontFamilies"
               }
             }
           },
@@ -1349,16 +1389,36 @@
                 "value": "{letterSpacing.0}",
                 "type": "letterSpacing"
               }
+            },
+            "lineHeight": {
+              "light": {
+                "value": "28",
+                "type": "lineHeights"
+              },
+              "dark": {
+                "value": "28",
+                "type": "lineHeights"
+              }
+            },
+            "fontFamily": {
+              "light": {
+                "value": "{fontFamily.roboto}",
+                "type": "fontFamilies"
+              },
+              "dark": {
+                "value": "{fontFamily.roboto}",
+                "type": "fontFamilies"
+              }
             }
           },
           "focus": {
             "background": {
               "light": {
-                "value": "{color.brand.orange.brand}",
+                "value": "{color.brand.orange.base}",
                 "type": "color"
               },
               "dark": {
-                "value": "{color.brand.orange.brand}",
+                "value": "{color.brand.orange.base}",
                 "type": "color"
               }
             },
@@ -1420,6 +1480,26 @@
               "dark": {
                 "value": "{letterSpacing.0}",
                 "type": "letterSpacing"
+              }
+            },
+            "lineHeight": {
+              "light": {
+                "value": "28",
+                "type": "lineHeights"
+              },
+              "dark": {
+                "value": "28",
+                "type": "lineHeights"
+              }
+            },
+            "fontFamily": {
+              "light": {
+                "value": "{fontFamily.roboto}",
+                "type": "fontFamilies"
+              },
+              "dark": {
+                "value": "{fontFamily.roboto}",
+                "type": "fontFamilies"
               }
             }
           },
