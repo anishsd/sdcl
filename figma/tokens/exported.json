@@ -1726,11 +1726,11 @@
           "default": {
             "background": {
               "light": {
-                "value": "{color.primary.orange.base}",
+                "value": "{color.brand.orange.base}",
                 "type": "color"
               },
               "dark": {
-                "value": "{color.primary.orange.base}",
+                "value": "{color.brand.orange.base}",
                 "type": "color"
               }
             },
@@ -1838,11 +1838,11 @@
           "default": {
             "background": {
               "light": {
-                "value": "{color.primary.orange.base}",
+                "value": "{color.brand.orange.base}",
                 "type": "color"
               },
               "dark": {
-                "value": "{color.primary.orange.base}",
+                "value": "{color.brand.orange.base}",
                 "type": "color"
               }
             },
@@ -1950,11 +1950,11 @@
           "default": {
             "background": {
               "light": {
-                "value": "{color.primary.orange.base}",
+                "value": "{color.brand.orange.base}",
                 "type": "color"
               },
               "dark": {
-                "value": "{color.primary.orange.base}",
+                "value": "{color.brand.orange.base}",
                 "type": "color"
               }
             },
