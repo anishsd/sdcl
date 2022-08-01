@@ -958,6 +958,18 @@
           "value": "#0F11154D",
           "type": "color"
         }
+      },
+      "white": {
+        "base": {
+          "value": "#FFFFFF",
+          "type": "color"
+        }
+      },
+      "black": {
+        "base": {
+          "value": "#000000",
+          "type": "color"
+        }
       }
     },
     "textCase": {
