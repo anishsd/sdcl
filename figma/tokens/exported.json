@@ -168,39 +168,39 @@
     },
     "fontWeight": {
       "thin": {
-        "value": "100",
+        "value": "Thin",
         "type": "fontWeights"
       },
       "extraLight": {
-        "value": "200",
+        "value": "ExtraLight",
         "type": "fontWeights"
       },
       "light": {
-        "value": "300",
+        "value": "Light",
         "type": "fontWeights"
       },
-      "normal": {
-        "value": "400",
+      "regular": {
+        "value": "Regular",
         "type": "fontWeights"
       },
       "medium": {
-        "value": "500",
+        "value": "Medium",
         "type": "fontWeights"
       },
       "semiBold": {
-        "value": "600",
+        "value": "SemiBold",
         "type": "fontWeights"
       },
       "bold": {
-        "value": "700",
+        "value": "Bold",
         "type": "fontWeights"
       },
       "extraBold": {
-        "value": "800",
+        "value": "ExtraBold",
         "type": "fontWeights"
       },
-      "heavy": {
-        "value": "900",
+      "black": {
+        "value": "Black",
         "type": "fontWeights"
       }
     },
@@ -250,7 +250,7 @@
         "Regular": {
           "value": {
             "fontFamily": "{fontFamily.heading}",
-            "fontWeight": "{fontWeight.normal}",
+            "fontWeight": "{fontWeight.regular}",
             "lineHeight": "{lineHeight.heading}",
             "fontSize": "{fontSize.h1}",
             "paragraphSpacing": "{paragraphSpacing.h1}",
@@ -274,7 +274,7 @@
         "Regular": {
           "value": {
             "fontFamily": "{fontFamily.heading}",
-            "fontWeight": "{fontWeight.normal}",
+            "fontWeight": "{fontWeight.regular}",
             "lineHeight": "{lineHeight.heading}",
             "fontSize": "{fontSize.h2}",
             "paragraphSpacing": "{paragraphSpacing.h2}",
@@ -286,7 +286,7 @@
       "Body": {
         "value": {
           "fontFamily": "{fontFamily.body}",
-          "fontWeight": "{fontWeight.normal}",
+          "fontWeight": "{fontWeight.regular}",
           "lineHeight": "{lineHeight.heading}",
           "fontSize": "{fontSize.body}",
           "paragraphSpacing": "{paragraphSpacing.h2}"
