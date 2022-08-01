@@ -1,20 +1,16 @@
-/* eslint-disable prettier/prettier */
-
 /* 
   Sanitize exported Figma tokens to 1 JSON token file per token set
 */
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
-const { asyncExec } = require('./common.js');
-const {
-  BRAND_TOKEN_SETS,
+import { asyncExec } from './common';
+import {
   EXPORTED_FIGMA_TOKENS_PATH,
   ROOT_TOKEN_SET,
   TRANSFORMED_TOKENS_PATH,
-  // eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
-} = require('../config.js');
+} from '../config';
+import { BRAND_TOKEN_SETS } from '../../src/utils/constants';
 
-async function sanitizeTokens() {
+export async function sanitizeTokens() {
   const tokenSets = [ROOT_TOKEN_SET, ...BRAND_TOKEN_SETS];
 
   return new Promise((resolve, reject) => {
@@ -35,8 +31,3 @@ async function sanitizeTokens() {
       });
   });
 }
-
-// eslint-disable-next-line no-undef
-module.exports = {
-  sanitizeTokens,
-};

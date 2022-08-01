@@ -1,17 +1,14 @@
-/* eslint-disable prettier/prettier */
-
 /* 
   Synchronize tokens from Figma to codebase
 */
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
-const { sanitizeTokens } = require('./sanitize-brand-tokens.js');
-// eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
-const { buildTokens } = require('./generate-development-tokens.js');
-// eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
-const { log, logErr, asyncExec } = require('./common.js');
-// eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
-const { FIGMA_SYNC_BRANCH } = require('../config.js');
+import { sanitizeTokens } from './sanitize-brand-tokens';
+import {
+  buildTokens,
+  registerCustomTransforms,
+} from './generate-development-tokens';
+import { asyncExec } from './common';
+import { FIGMA_SYNC_BRANCH } from '../config';
 
 const commentStartSeparator =
   '~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~';
@@ -21,7 +18,7 @@ const commentEndSeparator =
 function checkCurrentGitBranchStatus() {
   return new Promise((resolve, reject) => {
     asyncExec('git status --porcelain')
-      .then((gitStatus) => {
+      .then((gitStatus: any) => {
         const gitStatusCharCount = gitStatus?.length;
 
         if (!Number.isInteger(gitStatusCharCount)) {
@@ -51,7 +48,7 @@ function refreshGitSyncBranch() {
         asyncExec(checkoutCommand)
           .then(() => asyncExec(pullCommand))
           .catch((e) => reject(e))
-          .then(() => resolve())
+          .then(() => resolve(true))
           .catch((e) => reject(e))
       )
       .catch((e) => reject(e));
@@ -63,7 +60,7 @@ function lintCode() {
     const lintCommand = 'npm run format';
 
     asyncExec(lintCommand)
-      .then(() => resolve())
+      .then(() => resolve(true))
       .catch((e) => reject(e));
   });
 }
@@ -96,7 +93,7 @@ function preSync() {
     checkCurrentGitBranchStatus()
       .then(() =>
         refreshGitSyncBranch()
-          .then(() => resolve())
+          .then(() => resolve(true))
           .catch((e) => reject(e))
       )
       .catch((e) => reject(e));
@@ -119,7 +116,7 @@ async function sync() {
   try {
     await preSync();
 
-    log(
+    console.log(
       '\n' +
         commentStartSeparator +
         '\n' +
@@ -131,7 +128,7 @@ async function sync() {
 
     const sanitizeTokensLogs = await sanitizeTokens();
 
-    log(
+    console.log(
       sanitizeTokensLogs +
         '\n' +
         commentEndSeparator +
@@ -147,11 +144,13 @@ async function sync() {
         commentStartSeparator
     );
 
+    registerCustomTransforms();
+
     buildTokens();
 
     const finalMessage = await postSync();
 
-    log(
+    console.log(
       '\n' +
         commentEndSeparator +
         '\n' +
@@ -162,7 +161,7 @@ async function sync() {
         commentEndSeparator
     );
   } catch (err) {
-    logErr('Error :>> ', err);
+    console.error('Error :>> ', err);
   }
 }
 
