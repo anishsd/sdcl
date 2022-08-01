@@ -17,23 +17,13 @@ export const FONT_WEIGHT_MAP = {
   ExtraBold: 800,
   Black: 900,
 };
-export const PLATFORMS_CONFIG = [
-  {
-    type: 'css',
-    format: 'css/variables',
-    extension: 'css',
-    transforms: ['name/cti/kebab', 'shadow/css'],
-  },
-  {
-    type: 'js',
-    format: 'javascript/es6',
-    extension: 'ts',
-    transforms: ['name/cti/camel', 'shadow/css'],
-  },
-];
+export const CUSTOM_TRANSFORM_NAMES = {
+  shadowTransform: 'shadow',
+  fontWeightTransform: 'font-weight',
+}
 export const CUSTOM_TRANSFORMS: Named<Transform>[] = [
   {
-    name: 'shadow/css',
+    name: CUSTOM_TRANSFORM_NAMES.shadowTransform,
     type: 'value',
     matcher: function (prop) {
       return prop?.type === 'boxShadow';
@@ -45,7 +35,7 @@ export const CUSTOM_TRANSFORMS: Named<Transform>[] = [
     },
   },
   {
-    name: 'font-weight/css',
+    name: CUSTOM_TRANSFORM_NAMES.fontWeightTransform,
     type: 'value',
     matcher: function (prop) {
       return prop?.type === 'fontWeights';
@@ -56,5 +46,19 @@ export const CUSTOM_TRANSFORMS: Named<Transform>[] = [
 
       return fontWeightValue;
     },
+  },
+];
+export const PLATFORMS_CONFIG = [
+  {
+    type: 'css',
+    format: 'css/variables',
+    extension: 'css',
+    transforms: ['name/cti/kebab', CUSTOM_TRANSFORM_NAMES.shadowTransform, CUSTOM_TRANSFORM_NAMES.fontWeightTransform],
+  },
+  {
+    type: 'js',
+    format: 'javascript/es6',
+    extension: 'ts',
+    transforms: ['name/cti/camel', CUSTOM_TRANSFORM_NAMES.shadowTransform, CUSTOM_TRANSFORM_NAMES.fontWeightTransform],
   },
 ];
