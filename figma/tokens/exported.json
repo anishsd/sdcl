@@ -234,66 +234,6 @@
         "type": "fontSizes"
       }
     },
-    "typography": {
-      "H1": {
-        "Bold": {
-          "value": {
-            "fontFamily": "{fontFamily.heading}",
-            "fontWeight": "{fontWeight.bold}",
-            "lineHeight": "{lineHeight.heading}",
-            "fontSize": "{fontSize.h1}",
-            "paragraphSpacing": "{paragraphSpacing.h1}",
-            "letterSpacing": "{letterSpacing.decreased}"
-          },
-          "type": "typography"
-        },
-        "Regular": {
-          "value": {
-            "fontFamily": "{fontFamily.heading}",
-            "fontWeight": "{fontWeight.regular}",
-            "lineHeight": "{lineHeight.heading}",
-            "fontSize": "{fontSize.h1}",
-            "paragraphSpacing": "{paragraphSpacing.h1}",
-            "letterSpacing": "{letterSpacing.decreased}"
-          },
-          "type": "typography"
-        }
-      },
-      "H2": {
-        "Bold": {
-          "value": {
-            "fontFamily": "{fontFamily.heading}",
-            "fontWeight": "{fontWeight.bold}",
-            "lineHeight": "{lineHeight.heading}",
-            "fontSize": "{fontSize.h2}",
-            "paragraphSpacing": "{paragraphSpacing.h2}",
-            "letterSpacing": "{letterSpacing.decreased}"
-          },
-          "type": "typography"
-        },
-        "Regular": {
-          "value": {
-            "fontFamily": "{fontFamily.heading}",
-            "fontWeight": "{fontWeight.regular}",
-            "lineHeight": "{lineHeight.heading}",
-            "fontSize": "{fontSize.h2}",
-            "paragraphSpacing": "{paragraphSpacing.h2}",
-            "letterSpacing": "{letterSpacing.decreased}"
-          },
-          "type": "typography"
-        }
-      },
-      "Body": {
-        "value": {
-          "fontFamily": "{fontFamily.body}",
-          "fontWeight": "{fontWeight.regular}",
-          "lineHeight": "{lineHeight.heading}",
-          "fontSize": "{fontSize.body}",
-          "paragraphSpacing": "{paragraphSpacing.h2}"
-        },
-        "type": "typography"
-      }
-    },
     "color": {
       "brand": {
         "orange": {
