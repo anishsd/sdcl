@@ -51,7 +51,7 @@ export const CUSTOM_TRANSFORMS: Named<Transform>[] = [
       return prop?.type === 'fontWeights';
     },
     transformer: function (prop) {
-      const fontWeightLabel = prop.original.value;
+      const fontWeightLabel = prop.original.value as keyof typeof FONT_WEIGHT_MAP;
       const fontWeightValue = FONT_WEIGHT_MAP[fontWeightLabel];
 
       return fontWeightValue;
