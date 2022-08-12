@@ -1108,6 +1108,16 @@
                 "type": "color"
               }
             },
+            "borderColor": {
+              "light": {
+                "value": "{color.brand.white.base}",
+                "type": "color"
+              },
+              "dark": {
+                "value": "{color.brand.white.base}",
+                "type": "color"
+              }
+            },
             "shadow": {
               "light": {
                 "value": "{shadow.10.sm}",
